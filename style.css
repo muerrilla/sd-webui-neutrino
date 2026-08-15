@@ -21,16 +21,16 @@
 
     --qs-flex-base: 5%;
     
-	--qs-background-color: var(--background-fill-secondary);
+    --qs-background-color: var(--background-fill-secondary);
     --qs-border-color: var(--background-fill-secondary);
 
     --accordion-background-color: var(--input-background-fill);
 
-	--checkbox-background-color: var(--input-background-fill) !important;
-	--checkbox-background-color-selected: var(--input-background-fill) !important;
-	--checkbox-border-color: var(--neutral-300) !important;
-	--checkbox-border-color-selected: var(--checkbox-border-color) !important;
-	--checkbox-border-color-focus: var(--checkbox-border-color) !important;
+    --checkbox-background-color: var(--input-background-fill) !important;
+    --checkbox-background-color-selected: var(--input-background-fill) !important;
+    --checkbox-border-color: var(--neutral-300) !important;
+    --checkbox-border-color-selected: var(--checkbox-border-color) !important;
+    --checkbox-border-color-focus: var(--checkbox-border-color) !important;
 
     --checkbox-label-background-fill: var(--input-background-fill);
     --checkbox-label-background-fill-hover: var(--background-fill-secondary);
@@ -75,7 +75,7 @@
 /*------------------------------------------------------------------------ SET DARK MODE COLORS------------------------------------------------------------------*/
 
 .dark {
-	/*--primary-500 : #ff6600 !important;*/
+    /*--primary-500 : #ff6600 !important;*/
     --primary-500 : #88cc11 !important; 
     /*--primary-500 : #00cccc !important;*/
 
@@ -96,10 +96,10 @@
 
     --accordion-background-color: #2c2f34;
 
-	--checkbox-background-color: var(--input-background-fill) !important;
-	--checkbox-background-color-selected: var(--input-background-fill) !important;
-	--checkbox-border-color-selected: var(--input-background-fill) !important;
-	--checkbox-border-color-focus: var(--neutral-600) !important;
+    --checkbox-background-color: var(--input-background-fill) !important;
+    --checkbox-background-color-selected: var(--input-background-fill) !important;
+    --checkbox-border-color-selected: var(--input-background-fill) !important;
+    --checkbox-border-color-focus: var(--neutral-600) !important;
 
     --checkbox-label-background-fill: var(--input-background-fill) !important;
     --checkbox-label-background-fill-hover: var(--neutral-900) !important;
@@ -214,7 +214,7 @@ body::-webkit-scrollbar-thumb:hover {
 /*--------------------------------------------------------------------------- ASSIGN COLORS TO ELEMENTS --------------------------------------------------------------------------------------*/
 
 #quicksettings {
-	background: var(--qs-background-color) !important;
+    background: var(--qs-background-color) !important;
 }
 #quicksettings > #z-lock{
     background-color: var(--qs-background-color) !important;
@@ -241,8 +241,8 @@ body::-webkit-scrollbar-thumb:hover {
     background: transparent !important;
 }
 .progressDiv .progress{
-  	background: var(--color-accent);
-  	color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-accent);
 }
 .livePreview{
   background: var(--background-fill-secondary) !important;
@@ -281,7 +281,7 @@ body::-webkit-scrollbar-thumb:hover {
     border-color: var(--input-border-color-focus);
 }
 .gradio-dropdown ul.options li.item:not(:has(.hide)) {
-	background: var(--color-accent) !important;
+    background: var(--color-accent) !important;
     color: black!important;
 }
 .dark .gradio-dropdown ul.options{
@@ -415,9 +415,9 @@ body::-webkit-scrollbar {
     width: 12px;               
 }
 body::-webkit-scrollbar-thumb {
-	border-radius: var(--radius-md); 
-	border-width: 3px;
-	border-style: solid;
+    border-radius: var(--radius-md); 
+    border-width: 3px;
+    border-style: solid;
 }
 
 .gradio-dropdown .wrap-inner{
@@ -549,6 +549,20 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     white-space: nowrap;
 }
+
+#quicksettings .gradio-checkbox label:hover,
+#quicksettings .gradio-slider label:hover {
+    overflow: visible;
+    white-space: normal;
+}
+#quicksettings .gradio-checkbox label:hover > span,
+#quicksettings .gradio-slider label:hover > span {
+    background: var(--qs-background-color);
+    border-radius: var(--radius-sm);
+    padding: 0 var(--spacing-md);
+    border: 1px solid var(--border-color) !important;
+}
+
 #quicksettings > div{
     margin: 0 4px 0 0;
     flex-basis: var(--qs-flex-base) !important;
@@ -563,7 +577,7 @@ body::-webkit-scrollbar-thumb {
     margin-right: 20px !important;
 }
 #quicksettings input[type="number"] {
-	width: 5em;
+    width: 5em;
 }
 #quicksettings > #z-lock{
     cursor: pointer;
@@ -590,11 +604,11 @@ body::-webkit-scrollbar-thumb {
     top: 0;
 }
 .progressDiv .progress{
-  	width: 0%;
-  	height: 4px;
-  	border-radius: 0px;
-  	line-height: 1.5 !important;
-	margin-top: -10px;
+    width: 0%;
+    height: 4px;
+    border-radius: 0px;
+    line-height: 1.5 !important;
+    margin-top: -10px;
 }
 
 .livePreview{
@@ -751,12 +765,6 @@ input[type="number"] {
     display: block !important;
 }
 */
-#txt2img_prompt_container {
-    flex-flow: row !important;
-}
-#img2img_prompt_container{
-    flex-flow: row !important;    
-}
 
 #tab_extensions table td, #tab_extensions table th{
     border: 1px solid var(--border-color);
