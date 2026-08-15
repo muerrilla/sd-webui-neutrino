@@ -3,9 +3,9 @@
 /*----------------------------------------------------------------------- SET LIGHT MODE COLORS------------------------------------------------------------------*/
 
 :root {
-    --primary-500 : #ffba00 !important; /* selective yellow */    
-    /*--primary-500 : #90d6b7 !important; /* mint green */
-    /*--primary-500 : #00cccc !important; /* robin egg blue */
+    /*--primary-500 : #ff8800 !important; */
+    --primary-500 : #88cc11 !important; 
+    /*--primary-500 : #00cccc !important; */
 
     --neutral-50: #f0f0f0;
     --neutral-100: #ebebeb;
@@ -75,7 +75,9 @@
 /*------------------------------------------------------------------------ SET DARK MODE COLORS------------------------------------------------------------------*/
 
 .dark {
-	--primary-500 : #ffba00 !important;
+	/*--primary-500 : #ff6600 !important;*/
+    --primary-500 : #88cc11 !important; 
+    /*--primary-500 : #00cccc !important;*/
 
     --neutral-200: #d6d9db;
     --neutral-300: #aeb2b7;
@@ -256,6 +258,10 @@ body::-webkit-scrollbar-thumb:hover {
 #txt2img_results, #img2img_results {
     background: transparent !important;
 }
+#txt2img_results_panel, #img2img_results_panel {
+    background: transparent !important;
+    gap: .5em !important;
+}
 
 .performance .vram {
     color: var(--body-text-color-subdued);
@@ -319,11 +325,11 @@ input[type="checkbox"]:checked {
 
 input[type="range"] {
     background: var(--slider-empty-color);
-    border: 1px solid var(--block-border-color);
+    border: 3px solid var(--block-border-color);
 }   
-input[type=range]:focus {
+/*input[type=range]:focus {
     border: 1px solid var(--input-border-color-focus);
-}
+}*/
 input[type="range"]::-webkit-slider-thumb {
     background: var(--slider-thumb-color);
     border: 1px solid var(--input-border-color);
@@ -377,7 +383,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    overflow: visible; 
+    overflow: visible;
+    border-radius: 0; 
     border: none; 
     box-shadow: -800px 0 0 800px var(--slider-full-color);   
 }
@@ -436,7 +443,30 @@ body::-webkit-scrollbar-thumb {
     padding: 0.05em 0;
 }
 
-/*------------------------------------------------------------------------------- THE SUPER QUICKSETTINGS BAR -------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------ THE DECORATED LIST ------------------------------------------------------------------------------------*/
+
+#quicksettings .gradio-dropdown ul.options li.item{
+    padding-right: 12px;
+}
+#quicksettings .gradio-dropdown ul.options li.item::before {
+  content: attr(data-value);
+  display: inline-block;
+  position: relative;
+  font-family: monospace;
+  font-size: 1.3em;
+  top: -.15em;
+  width: 1ch;
+  height: 1em;
+  margin-left: 8px;
+  font-weight: bold;
+  text-transform: capitalize;!important;
+  overflow: hidden;
+  color: var(--color-accent);
+}
+
+
+/*------------------------------------------------------------------------------- THE SUPER QUICKSETTINGS ------------------------------------------------------------------------------------*/
 
 #quicksettings {
     position: fixed;
@@ -517,16 +547,8 @@ body::-webkit-scrollbar-thumb {
 #quicksettings label{
     max-height: 1.5em;
     overflow: hidden;
-    align-items: start;
+    white-space: nowrap;
 }
-#quicksettings label:hover {
-    overflow: visible;
-}
-#quicksettings label:hover > span {
-    background: var(--neutral-800);
-    border-radius: var(--radius-sm);
-}
-
 #quicksettings > div{
     margin: 0 4px 0 0;
     flex-basis: var(--qs-flex-base) !important;
@@ -535,7 +557,7 @@ body::-webkit-scrollbar-thumb {
     max-width: unset;
 }
 #quicksettings > div:not(:first-child) {
-    margin-left: 4px !important;
+    margin-left: 10px !important;
 }
 #quicksettings > :nth-last-child(2) {
     margin-right: 20px !important;
@@ -561,28 +583,7 @@ body::-webkit-scrollbar-thumb {
     background-image: var(--icon-locked) !important;
 }
 
-/*------------------------------------------------------------- THE DECORATED LIST IN QUICK SETTINGS ------------------------------------------------------------*/
-
-#quicksettings .gradio-dropdown ul.options li.item{
-    padding-right: 12px;
-}
-#quicksettings .gradio-dropdown ul.options li.item::before {
-  content: attr(data-value);
-  display: inline-block;
-  position: relative;
-  font-family: monospace;
-  font-size: 1.3em;
-  top: -.15em;
-  width: 1ch;
-  height: 1em;
-  margin-left: 8px;
-  font-weight: bold;
-  text-transform: capitalize;!important;
-  overflow: hidden;
-  color: var(--color-accent);
-}
-
-/*----------------------------------------------------------------------------- OUTPUT VIEWPORTS ----------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------- THE OUTPUT VIEWPORTS ---------------------------------------------------------------------------------*/
 
 .progressDiv {
     position: absolute;
@@ -601,8 +602,8 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 60px;
 }
 .livePreview img{
-    height: 640px;
-    object-fit: scale-down; /* remove to make it fit */
+    height: 660px;
+    /*object-fit: scale-down; /* remove to make it fit */
 }
 
 #txt2img_gallery, #img2img_gallery{
@@ -610,6 +611,14 @@ body::-webkit-scrollbar-thumb {
     min-height: 700px;
     border: 0;
     box-shadow: none;
+}
+#txt2img_gallery .image-button, 
+#img2img_gallery .image-button{
+    height: calc(100% - 40px) !important;
+}
+#txt2img_gallery .thumbnails, 
+#img2img_gallery .thumbnails{
+    height: 40px !important;
 }
 #txt2img_gallery .preview,
 #img2img_gallery .preview{
@@ -669,7 +678,7 @@ input[type="number"] {
     padding: 8px !important;
 }
 #footer {
-    margin-top: 60px !important;
+    margin-top: 50px !important;
 }
 /* fix for rows of small elements */
 #txt2img_script_container div.compact,
@@ -703,6 +712,14 @@ input[type="number"] {
     max-height: 24px !important;
 }
 
+#txt2img_styles_row > .form, 
+#img2img_styles_row > .form {
+    min-width: min(20px, 100%) !important;
+}
+#txt2img_styles_row, 
+#img2img_styles_row {
+    gap: 0.25em;
+}
 #txt2img_actions_column,
 #img2img_actions_column {
     justify-content: space-between;
@@ -716,18 +733,42 @@ input[type="number"] {
     border: none !important;
     padding: 0px 4px;
 }
+/*
+#txt2img_token_counter,
+#txt2img_negative_token_counter {
+    display: none !important;
+}
+#txt2img_prompt_container:has(textarea:focus) #txt2img_token_counter,
+#txt2img_prompt_container:has(textarea:focus) #txt2img_negative_token_counter {
+    display: block !important;
+}
+#img2img_token_counter,
+#img2img_negative_token_counter {
+    display: none !important;
+}
+#img2img_prompt_container:has(textarea:focus) #img2img_token_counter,
+#img2img_prompt_container:has(textarea:focus) #img2img_negative_token_counter {
+    display: block !important;
+}
+*/
+#txt2img_prompt_container {
+    flex-flow: row !important;
+}
+#img2img_prompt_container{
+    flex-flow: row !important;    
+}
 
 #tab_extensions table td, #tab_extensions table th{
     border: 1px solid var(--border-color);
 }
 
 .extra-network-cards .card .actions .name {
-    font-size: 1.2em;
-     font-weight: normal; 
+    font-size: 1em;
+     /*font-weight: normal; */
 }
 .extra-network-cards .card {
-    width: 8em;
-    height: 12em;
+    width: 100px;
+    height: 120px;
 }
 
 #txt2img_generate, #img2img_generate {
@@ -745,4 +786,60 @@ input[type="number"] {
 #html_info_txt2img,
 #html_info_img2img {
     font-size: var(--text-xs) !important;
+}
+
+#html_info_txt2img::-webkit-scrollbar,  
+#html_info_img2img::-webkit-scrollbar{
+    width: 0;
+}
+
+#html_info_txt2img:focus,
+#html_info_img2img:focus {
+    position: fixed;
+    width: 770px;
+    height: 700px;
+    top: 120px;
+    right: 175px;
+    z-index: 11111;
+    opacity: 95%;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    background: var(--background-fill-secondary);
+    border: 2.5em solid var(--background-fill-secondary) !important;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 0 60px 0px #000000dd !important;
+}
+
+#html_log_txt2img,
+#html_log_img2img {
+    position: absolute;
+    top: -1.4em;
+    width: calc(100% - 20px);
+}
+
+.toast-body {
+    scale: .7;
+    opacity: .7;
+    bottom: 0 !important;
+    max-width: 800px !important;
+    position: fixed !important;
+}
+
+#tab_settings #settings .tab-nav button {
+    font-size: small;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--body-text-color);
+    line-height: 1.25em;
+}
+#tab_settings #settings .tab-nav span {
+    margin-bottom: 0;
+    margin-top: .25em;
+    color: var(--button-primary-text-color);
+}
+
+/*------------------------------------------------------------------------------------------------ WIP ---------------------------------------------------------------------------------------*/
+
+#quicksettings>div, #quicksettings>fieldset {
+    width: min-content !important;
 }
