@@ -233,8 +233,24 @@ body::-webkit-scrollbar-thumb:hover {
 #img2img_script_container .gradio-accordion {
     background: var(--accordion-background-color) !important;
 }
+#txt2img_script_container .gradio-accordion:has(> button):hover, 
+#img2img_script_container .gradio-accordion:has(> button):hover {
+    background: var(--input-background-fill) !important;
+}
+#txt2img_script_container .gradio-accordion:has(> button.open):hover, 
+#img2img_script_container .gradio-accordion:has(> button.open):hover {
+    background: var(--accordion-background-color) !important;
+}
 #txt2img_accordions .gradio-accordion,
 #img2img_accordions .gradio-accordion {
+    background: var(--accordion-background-color) !important;
+}
+#txt2img_accordions .gradio-accordion:has(> button):hover, 
+#img2img_accordions .gradio-accordion:has(> button):hover {
+    background: var(--input-background-fill) !important;
+}
+#txt2img_accordions .gradio-accordion:has(> button.open):hover, 
+#img2img_accordions .gradio-accordion:has(> button.open):hover {
     background: var(--accordion-background-color) !important;
 }
 .progressDiv {
@@ -672,7 +688,6 @@ div.gradio-container {
 .block.padded.gradio-accordion {
     border-radius: var(--radius-lg) !important;
     margin-bottom: 0.4em;
-    box-shadow: var(--block-shadow) !important;
 }
 
 div#script-list {
