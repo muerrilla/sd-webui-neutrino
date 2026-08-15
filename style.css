@@ -230,29 +230,24 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 #txt2img_script_container .gradio-accordion,
-#img2img_script_container .gradio-accordion {
+#img2img_script_container .gradio-accordion,
+#txt2img_accordions .gradio-accordion,
+#img2img_accordions .gradio-accordion  {
     background: var(--accordion-background-color) !important;
 }
 #txt2img_script_container .gradio-accordion:has(> button):hover, 
-#img2img_script_container .gradio-accordion:has(> button):hover {
+#img2img_script_container .gradio-accordion:has(> button):hover,
+#txt2img_accordions .gradio-accordion:has(> button):hover, 
+#img2img_accordions .gradio-accordion:has(> button):hover  {
     background: var(--input-background-fill) !important;
 }
 #txt2img_script_container .gradio-accordion:has(> button.open):hover, 
-#img2img_script_container .gradio-accordion:has(> button.open):hover {
-    background: var(--accordion-background-color) !important;
-}
-#txt2img_accordions .gradio-accordion,
-#img2img_accordions .gradio-accordion {
-    background: var(--accordion-background-color) !important;
-}
-#txt2img_accordions .gradio-accordion:has(> button):hover, 
-#img2img_accordions .gradio-accordion:has(> button):hover {
-    background: var(--input-background-fill) !important;
-}
+#img2img_script_container .gradio-accordion:has(> button.open):hover,
 #txt2img_accordions .gradio-accordion:has(> button.open):hover, 
 #img2img_accordions .gradio-accordion:has(> button.open):hover {
     background: var(--accordion-background-color) !important;
 }
+
 .progressDiv {
     background: transparent !important;
 }
@@ -707,7 +702,7 @@ input[type="number"] {
     padding: 8px !important;
 }
 #footer {
-    margin-top: 50px !important;
+    margin-top: 100px !important;
 }
 /* fix for rows of small elements */
 #txt2img_script_container div.compact,
