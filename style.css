@@ -4,8 +4,9 @@
 
 :root {
     /*--primary-500 : #ff8800 !important; */
-    --primary-500 : #88cc11 !important; 
+    /*--primary-500 : #88cc11 !important;*/
     /*--primary-500 : #00cccc !important; */
+    --primary-500 : var(--neutrino-accent-color) !important;
 
     --neutral-50: #f0f0f0;
     --neutral-100: #ebebeb;
@@ -76,8 +77,9 @@
 
 .dark {
     /*--primary-500 : #ff6600 !important;*/
-    --primary-500 : #88cc11 !important; 
+    /*--primary-500 : #88cc11 !important;*/
     /*--primary-500 : #00cccc !important;*/
+    --primary-500 : var(--neutrino-accent-color) !important;
 
     --neutral-200: #d6d9db;
     --neutral-300: #aeb2b7;
