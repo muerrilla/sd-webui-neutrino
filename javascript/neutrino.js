@@ -186,7 +186,6 @@ function replaceButtons(){
       button.setAttribute('title', buttonTooltip);
     }
   }
-  console.log("kir"); 
 }
 
 function generateRandomCardSet() {
