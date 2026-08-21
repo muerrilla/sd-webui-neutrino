@@ -9,7 +9,7 @@ shared.options_templates.update(
             'sd_webui_neutrino_accent_color':
                 shared.OptionInfo(
                     '#88cc11',
-                    'InputAccordion highlight - Text color - Light mode', ui_components.FormColorPicker
+                    'Neutrino Accent Color', ui_components.FormColorPicker
                 ).needs_reload_ui()
         }
     )
