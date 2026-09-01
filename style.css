@@ -8,14 +8,19 @@
     /*--primary-500 : #00cccc !important; */
     --primary-500 : var(--neutrino-accent-color) !important;
 
-    --neutral-50: #f0f0f0;
-    --neutral-100: #ebebeb;
-    --neutral-200: #e4e4e4;
+    --neutral-0: #e6e6e6;
+    --neutral-50: #dfdfdf;
+    --neutral-100: #dadada;
+    --neutral-200: #e6e6e6;
+    --neutral-300: #cacaca;
+    --neutral-400: #aaa;
+    --neutral-500: #555;
+    --neutral-700: #222;
 
     --body-background-fill: var(--neutral-50);
     --background-fill-primary: var(--neutral-50);
     --background-fill-secondary: var(--neutral-100);
-    --input-background-fill:  var(--neutral-50);
+    --input-background-fill:  var(--neutral-0);
 
     --padding-main-top: 0;
     --padding-main-side: 150px;
@@ -25,7 +30,7 @@
     --qs-background-color: var(--background-fill-secondary);
     --qs-border-color: var(--background-fill-secondary);
 
-    --accordion-background-color: var(--input-background-fill);
+    --accordion-background-color: var(--neutral-50);
 
     --checkbox-background-color: var(--input-background-fill) !important;
     --checkbox-background-color-selected: var(--input-background-fill) !important;
