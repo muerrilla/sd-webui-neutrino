@@ -6,7 +6,7 @@ shared.options_templates.update(
     shared.options_section(
         ('neutrino', 'Neutrino'),
         {
-            'sd_webui_neutrino_accent_color':
+            'neutrino_accent_color':
                 shared.OptionInfo(
                     '#88cc11',
                     'Neutrino Accent Color', ui_components.FormColorPicker
