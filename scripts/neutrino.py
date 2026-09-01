@@ -9,11 +9,16 @@ shared.options_templates.update(
             'neutrino_accent_color':
                 shared.OptionInfo(
                     '#88cc11',
-                    'Neutrino Accent Color', ui_components.FormColorPicker
+                    'Neutrino Accent Color - Light Mode', ui_components.FormColorPicker
+                ).needs_reload_ui(),
+            'neutrino_accent_color_dark':
+                shared.OptionInfo(
+                    '#88cc11',
+                    'Neutrino Accent Color - Dark Mode', ui_components.FormColorPicker
                 ).needs_reload_ui()
         }
     )
 )
 
 shared.gradio_theme.neutrino_accent_color = shared.opts.neutrino_accent_color
-shared.gradio_theme.neutrino_accent_color_dark = shared.opts.neutrino_accent_color
+shared.gradio_theme.neutrino_accent_color_dark = shared.opts.neutrino_accent_color_dark
